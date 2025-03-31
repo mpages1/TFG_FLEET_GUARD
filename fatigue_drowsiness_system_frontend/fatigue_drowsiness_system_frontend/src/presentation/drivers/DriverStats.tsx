@@ -21,7 +21,7 @@ const DriverStats = ({metrics}: Props) => {
             <div><strong>Consum de combustible:</strong> {metrics.fuelConsumption?.toFixed(2)} L</div>
             <div><strong>Fatiga:</strong> {metrics.fatigueScore?.toFixed(2)}</div>
             <div><strong>Somnolència:</strong> {metrics.drowsinessScore?.toFixed(2)}</div>
-            <div><strong>Detecció:</strong> {metrics.fatigueDetected ? "Yes" : "No"}</div>
+            <div><strong>Detecció:</strong> {metrics.fatigueDetected ? "Si" : "No"}</div>
         </div>
     );
 };

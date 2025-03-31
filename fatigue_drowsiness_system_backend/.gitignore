@@ -1,33 +1,55 @@
-HELP.md
+# Maven
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# Gradle (si uses Gradle en lloc de Maven)
+.gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+!gradle/wrapper/gradle-wrapper.jar
 
-### VS Code ###
+# Logs
+*.log
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+*.classpath
+*.project
+*.settings/
+bin/
+
+# VS Code
 .vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Spring Boot
+application.properties
+application.yml
+application-local.properties
+application-dev.properties
+application-prod.properties
+
+# Docker
+*.pid
+*.tar
+*.env
+docker-compose.override.yml
+
+# Others
+.env
+*.swp

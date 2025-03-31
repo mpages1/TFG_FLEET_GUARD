@@ -17,7 +17,7 @@ export const connectWebSocket = (
             userId: String(userId),
         },
         onConnect: () => {
-            console.log('✅ WebSocket connected');
+            console.log('WebSocket connected');
 
             stompClient?.subscribe(`/topic/driver/${userId}/status`, (message: IMessage) => {
                 const body = JSON.parse(message.body);

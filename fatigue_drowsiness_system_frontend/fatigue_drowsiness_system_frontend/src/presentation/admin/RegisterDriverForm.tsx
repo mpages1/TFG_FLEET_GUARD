@@ -3,13 +3,13 @@ import api from "@/infrastructure/api";
 
 const RegisterDriverForm = () => {
     const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        password: "",
-        licenseNumber: "",
-        phone: "",
-        dateOfBirth: "",
-        address: "",
+        nom: "",
+        correu: "",
+        contrasenya: "",
+        numllicència: "",
+        telèfon: "",
+        DataNaixement: "",
+        adreça: "",
         roleId: 2,
     });
 

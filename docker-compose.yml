@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    build: ./fatigue_drowsiness_system_backend/fatigue_drowsiness_system_backend
+    build: ./fatigue_drowsiness_system_backend
     container_name: backend
     ports:
       - "8080:8080"
