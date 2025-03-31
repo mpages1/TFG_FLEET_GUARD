@@ -1,0 +1,80 @@
+### Start server command
+# python flask_server.py
+
+### Initialising server (state READY)
+POST http://localhost:5002/init_camera_detection
+Content-Type: application/json
+
+{
+  "shape_predictor_path": "camera_based_detection/shape_predictor_68_face_landmarks.dat",
+  "alarm_path": "camera_based_detection/alarm.wav",
+  "webcam_index": 0
+}
+
+
+### Start camera detection for driver 1
+POST http://localhost:5002/start_camera_detection
+Content-Type: application/json
+
+{
+  "driver_id": 1
+}
+
+### Start tachograph detection
+POST http://localhost:5002/init_tachograph_detection
+
+### Start tachograph detection for driver 1
+POST http://localhost:5002/start_tachograph_detection
+Content-Type: application/json
+
+{
+  "driver_id": 1
+}
+
+### Initialising combined detection
+POST http://localhost:5002/init_combined_detection
+Content-Type: application/json
+
+
+### Start combined detection for driver 1
+POST http://localhost:5002/start_combined_detection
+Content-Type: application/json
+
+{
+  "driver_id": 1
+}
+
+### Train combined detection model for driver 1
+POST http://localhost:5002/train_combined_model
+Content-Type: application/json
+
+{
+  "driver_id": 6
+}
+
+### Stop camera detection for driver 1
+POST http://localhost:5002/stop_camera_detection
+Content-Type: application/json
+
+{
+  "driver_id": 6
+}
+
+### Stop tachograph detection for driver 1
+POST http://localhost:5002/stop_tachograph_detection
+Content-Type: application/json
+
+{
+  "driver_id": 6
+}
+
+### Stop combined detection for driver 1
+POST http://localhost:5002/stop_combined_detection
+Content-Type: application/json
+
+{
+  "driver_id": 6
+}
+
+### Stop server
+POST http://localhost:5002/stop_server

@@ -1,0 +1,8 @@
+
+python -m venv env
+env\Scripts\activate
+
+python flask_server.py
+
+
+pip install flask joblib numpy opencv-python dlib imutils pygame scipy pandas  sqlalchemy  psycopg2 scikit-learn keras tensorflow markupsafe

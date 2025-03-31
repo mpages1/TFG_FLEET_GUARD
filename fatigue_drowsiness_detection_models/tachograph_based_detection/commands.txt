@@ -1,0 +1,17 @@
+python -m venv env
+env\Scripts\activate
+pip install pandas numpy sqlalchemy scikit-learn keras psycopg2
+
+python main.py -c "tachograph_data.csv"
+
+
+python main.py
+
+python lstm_fatigue_detection_model.py --csv tachograph_data.csv
+python lstm_fatigue_detection_model.py
+
+
+rm tachograph_fatigue_model.keras
+
+python main.py --driver-id 1
+python main.py --driver-id 1 --stop

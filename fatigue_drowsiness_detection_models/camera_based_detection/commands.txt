@@ -1,0 +1,9 @@
+python -m venv env
+env\Scripts\activate
+
+pip install numpy opencv-python dlib imutils pygame scipy pandas  sqlalchemy  psycopg2
+
+###Execute code with càmera, landmarks and alarm sound
+python main.py --shape-predictor "C:\Users\Usuario\Desktop\Fatigue_Drowsiness_Detection_System\face_detection_model_TFG\camera_based_detection\shape_predictor_68_face_landmarks.dat"
+
+ --alarm "C:\Users\Usuario\Desktop\Fatigue_Drowsiness_Detection_System\face_detection_model_TFG\camera_based_detection\warning-alarm-loop.mp3" --webcam 0 --driver-id 1

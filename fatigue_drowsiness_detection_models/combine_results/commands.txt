@@ -1,0 +1,9 @@
+python -m venv env
+env\Scripts\activate
+
+pip install numpy opencv-python dlib imutils pygame scipy pandas  sqlalchemy  psycopg2 scikit-learn keras tensorflow markupsafe
+
+python main.py
+
+python main.py --train --driver-id 1
+python main.py --driver-id 1

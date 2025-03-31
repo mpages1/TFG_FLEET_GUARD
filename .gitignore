@@ -1,0 +1,25 @@
+# Maven
+**/target/
+*.iml
+.classpath
+.project
+.settings/
+
+# Node (frontend)
+**/node_modules/
+**/dist/
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/.venv/
+**/env/
+
+# Docker
+**/.DS_Store
+docker-compose.override.yml
+
+# IDEs
+.vscode/
+.idea/
