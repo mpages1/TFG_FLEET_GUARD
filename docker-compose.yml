@@ -1,49 +1,24 @@
 version: '3.8'
 
 services:
-  backend:
-    build: ./fatigue_drowsiness_system_backend
-    container_name: backend
-    ports:
-      - "8080:8080"
-    depends_on:
-      - postgres
-    networks:
-      - app-network
-    environment:
-      - SPRING_PROFILES_ACTIVE=prod
-      - DB_URL=jdbc:postgresql://postgres:5432/TFG
-      - DB_USER=postgres
-      - DB_PASSWORD=admin123
-
-  frontend:
-    build: ./fatigue_drowsiness_system_frontend/fatigue_drowsiness_system_frontend
-    container_name: frontend
-    ports:
-      - "5173:5173"
-    depends_on:
-      - backend
-    networks:
-      - app-network
-    environment:
-      - VITE_API_URL=http://localhost:8080
          
   postgres:
-    build: ./postgres-custom
+    image: postgres:15
     container_name: postgres
     environment:
-      POSTGRES_DB: TFG
+      POSTGRES_DB: FLEET_GUARD
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin123
     ports:
-      - "5432:5432"
+      - "33333:5432"
     networks:
       - app-network
     volumes:
-      - postgres_data:/var/lib/postgresql/data
       - ./postgres-init:/docker-entrypoint-initdb.d
-    command: postgres -c config_file=/etc/postgresql/postgresql.conf  
-
+      - ./postgres-config/pg_hba.conf:/etc/postgresql/pg_hba.conf
+      - pgadmin_data:/var/lib/pgadmin
+    command: postgres -c listen_addresses='*'  
+    
   pgadmin:
     image: dpage/pgadmin4
     container_name: pgadmin
@@ -56,6 +31,28 @@ services:
       - postgres
     networks:
       - app-network
+      
+  backend:
+    build: ./fatigue_drowsiness_system_backend
+    container_name: backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+  frontend:
+    build: ./fatigue_drowsiness_system_frontend/fatigue_drowsiness_system_frontend
+    container_name: frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    environment:
+      - VITE_API_URL=http://localhost:8080
 
 networks:
   app-network:
@@ -63,3 +60,5 @@ networks:
 
 volumes:
   postgres_data:
+  pgadmin_data:
+

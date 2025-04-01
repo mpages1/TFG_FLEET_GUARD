@@ -1,4 +1,13 @@
+DO
+$$
+BEGIN
+   IF NOT EXISTS (SELECT FROM pg_database WHERE datname = 'FLEET_GUARD') THEN
+      CREATE DATABASE "FLEET_GUARD";
+   END IF;
+END
+$$;  
 
+\connect "FLEET_GUARD";
 
 CREATE TABLE roles (
     id SERIAL PRIMARY KEY,

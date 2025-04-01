@@ -8,9 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SpringDataTachographRepository extends JpaRepository<TachographEntity, Integer> {
 
-    // Optional<TachographEntity> findTopByDriverIdOrderByTimestampDesc(Integer
-    // driverId);
-
     Optional<TachographEntity> findTopByDriverIdOrderByTimestampDescIdDesc(Integer driverId);
 
 }

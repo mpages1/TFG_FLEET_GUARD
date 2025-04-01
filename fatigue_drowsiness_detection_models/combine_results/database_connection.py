@@ -4,5 +4,7 @@ import sqlalchemy
 
 
 def get_engine():
-    engine = sqlalchemy.create_engine('postgresql+psycopg2://postgres:admin123@host.docker.internal:5432/TFG')
+    engine = sqlalchemy.create_engine('postgresql://postgres:admin123@host.docker.internal:33333/FLEET_GUARD')
+    print("Connecting to:", engine.url)
     return engine
+
