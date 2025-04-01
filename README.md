@@ -53,7 +53,7 @@ localhost:33333 → PostgreSQL (usuari: postgres, contrasenya: admin123)
 Aquest pas és essencial. Sense els models de detecció en funcionament, el sistema no pot detectar fatiga ni enviar alertes.
 
 ```bash
-cd flask_models/
+cd fatigue_drowsiness_detection_models/
 python flask_server.py
 ````
 Això exposa el servei Flask a http://localhost:5002 amb les següents rutes:
