@@ -50,7 +50,7 @@ localhost:33333 → PostgreSQL (usuari: postgres, contrasenya: admin123)
 
 
 ### 3. Inicia els models de detecció (fora de Docker)
-Aquest pas és essencial. Sense els models de detecció en funcionament, el sistema no pot detectar fatiga ni enviar alertes.
+Aquest pas és essencial. Sense els models de detecció en funcionament, el sistema no pot detectar fatiga ni somnolència, per tant tampoc pot enviar alertes.
 
 ```bash
 cd fatigue_drowsiness_detection_models/
