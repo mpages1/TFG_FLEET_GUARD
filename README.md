@@ -84,8 +84,10 @@ Els models han d’executar-se abans d’interactuar amb la detecció des de l�
 
 PgAdmin no guarda les connexions per defecte si no es persisteix pgadmin_data com a volum.
 
-Vídeo Demostratiu:
+Demo:
 
+https://github.com/user-attachments/assets/735b9c8e-3937-4d75-b5a4-9c9a7ae1e7f8
 
+Com arrencar:
 https://github.com/user-attachments/assets/9231a1fb-f422-469c-8cbd-e36d3fc69994
 
