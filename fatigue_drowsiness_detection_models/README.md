@@ -2,8 +2,6 @@
 
 ## Contributors
 **Author**: Mahesh Pagès Fenoy  
-**Tutor**: Imanol Rojas Pérez
-
 
 
 This repository contains modules for detecting driver fatigue and drowsiness based on camera data and tachograph data. The system is designed to combine these predictions to provide a comprehensive evaluation of a driver's state.
