@@ -1,4 +1,4 @@
-# Comprehensive Driver Fatigue and Drowsiness Detection System (TFG 2025) - Tecnocampus & Taxitronic
+# Comprehensive Driver Fatigue and Drowsiness Detection System (TFG 2025)
 
 ## Contributors
 **Author**: Mahesh Pagès Fenoy  
